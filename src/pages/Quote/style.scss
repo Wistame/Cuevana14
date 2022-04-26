@@ -1,0 +1,87 @@
+@use "/src/scss" as s;
+
+.quoteComponent {
+  .paginationWrapper {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    justify-content: center;
+    padding: 10px 35px;
+    flex-wrap: wrap;
+    flex-basis: 33%;
+
+    .paginationPages {
+      padding: 10px;
+      display: flex;
+      flex: 1;
+      :hover {
+        background-color: bisque;
+    } 
+    :active {
+        background-color: red;
+    }
+
+      button {
+        background-color: #844aa5;
+        border-style: unset;
+        border: 3px solid #b482d1;
+        border-radius: 100%;
+        width: 30px;
+        height: 30px;
+
+
+        p {
+          color: whitesmoke;
+          font-size: 1em;
+          font-weight: bold;
+          text-align: center;
+        }
+        @media (min-width: s.$tablet) {
+          button: {
+          }
+        }
+      }
+    }
+  }
+  .activePage {
+    padding: 10px;
+    display: flex;
+    flex: 1;
+    :hover {
+        background-color: bisque;
+    } 
+    button {
+        background-color: #b482d1;
+        border-style: unset;
+        border-radius: 100%;
+        width: 30px;
+        height: 30px;
+      border: 5px solid black;
+    }
+  }
+  .quoteResult {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    .singlQuote {
+      display: flex;
+      border: 1px grey;
+
+      border-radius: 15px;
+      width: 100%;
+      margin: 9px;
+      flex-wrap: wrap;
+      padding: 18px;
+      flex-direction: column;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    @media (min-width: s.$tablet) {
+      .singlQuote {
+        width: 300px;
+        background-repeat: unset;
+        background-size: unset;
+      }
+    }
+  }
+}

@@ -3,12 +3,22 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Quote from "./pages/Quote";
+import NotFound from "./pages/NotFound";
+import Header from "./pages/HomePage";
+import SeriesSelectorComponent from "./components/SeriesSelectorComponent/Index";
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <Routes>
+      <Route path="/" element={<App />}>
+        <Route path="selector" element={<SeriesSelectorComponent />} />
+        <Route path="quote" element={<Quote />} />
+        <Route path="*" element={<NotFound />} />
+      </Route>
+      </Routes>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")

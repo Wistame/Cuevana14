@@ -1,13 +1,20 @@
-import { Outlet, Link } from "react-router-dom";
+import Navigator from "../../components/NavigatorComponent";
+import SeriesSelectorComponent from "../../components/SeriesSelectorComponent/Index";
+import "./style.scss";
+
+
+
+const TitleComponent = () => (
+  <div className="headerTitle">
+    <p>@QuoteMe</p>
+  </div>
+);
 
 const HomePage = () => {
   return (
-    <div>
-      <p>HomePage</p>
-    <nav>
-      <Link to="quote">Search 4 Quotes!</Link>
-      </nav>
-      <Outlet />
+    <div className="header">
+      <TitleComponent />
+      <Navigator />
     </div>
   );
 };

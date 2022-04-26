@@ -1,0 +1,33 @@
+@use '/src/scss' as s;
+
+
+.selectorWrapper {
+  display: flex;
+  flex-wrap: wrap;
+
+  .selectorTitle {
+    display: flex;
+    background-color: black;
+    width: 100%;
+    justify-content: center;
+    height: s.scaleUp(5);
+    align-items: center;
+
+    p {
+      font-size: 30px;
+      color: whitesmoke;
+    }
+  }
+  .selectorList {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    justify-content: center;
+    //margin: 18px 0px;
+    background-color: violet;
+    min-height: s.scaleUp(66);
+    align-content: center;
+    padding-bottom: s.scaleUp(2);
+    width: 100%;
+  }
+}

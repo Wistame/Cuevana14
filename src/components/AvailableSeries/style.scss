@@ -1,0 +1,35 @@
+@use '/src/scss' as s;
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  width:  s.scaleUp(33);
+  height: s.scaleUp(55);
+  margin: s.scaleUp(1);
+  border-radius: 10% 10% 0% 0%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  transition: 0.2s ease-in-out;
+  &:hover {
+    transform: scale(1.07);
+  }
+  div {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    background-color: black;
+    opacity: 0.9;
+    &:hover {
+      opacity: 1;
+      transition: 0.2s ease-in-out;
+    }
+    p {
+      color: White;
+      font-size: s.scaleUp(4);
+      opacity: 1;
+      text-align: center;
+    }
+  }
+}

@@ -1,20 +1,20 @@
-import "./App.css";
-import { Routes, Route, Link, Outlet } from "react-router-dom";
-import HomePage from "./pages/HomePage";
-import Quote from "./pages/Quote";
-import NotFound from "./pages/NotFound";
-import About from "./pages/About";
+import "./App.scss";
+import { Outlet } from "react-router-dom";
+import Header from "./pages/HomePage";
+import About from "./components/About";
 
 function App() {
   return (
-    <div>
-      <Routes>
-        <Route path="/" element={<HomePage />}>
-          <Route path="quote" element={<Quote />} />
-          <Route path="about" element={<About />} />
-        </Route>
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+    <div className="App">
+      <div className="app-header">
+        <Header />
+      </div>
+      <div className="app-content">
+        <Outlet />
+      </div>
+      <div className="app-footer">
+        <About />
+      </div>
     </div>
   );
 }

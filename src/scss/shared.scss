@@ -1,0 +1,6 @@
+@function scaleUp($scaleValue){
+    @return $scaleValue * 9px;
+  }
+  $mobile:  (scaleUp(46)+1);
+  $tablet: (scaleUp(90)+1);
+  

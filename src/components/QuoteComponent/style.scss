@@ -1,0 +1,30 @@
+.quoteLine {
+  background-color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  flex: 3 1 auto;
+  text-align: center;
+  border-radius: 15px 15px 0 0;
+  align-items: center;
+  padding: 9px;
+  justify-content: center;
+
+  p {
+    font-size: 2em;
+  }
+}
+
+.author {
+  background-color: black;
+  width: 100%;
+  display: flex;
+  flex: 1 1;
+  justify-content: end;
+  padding: 0 19px;
+  border-radius: 0 0 15px 15px;
+
+  p {
+    color: #b482d1;
+    font-size: 2em;
+    text-align: center;
+  }
+}

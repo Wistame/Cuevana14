@@ -1,0 +1,48 @@
+@use '/src/scss' as s;
+* {
+  box-sizing: border-box;
+}
+html,
+body,
+#root,
+.App {
+  height: 100%;
+  width: 100%;
+}
+/* body {
+
+} */
+p {
+  font-family: "Abel", sans-serif;
+  margin: 0px;
+}
+a {
+  text-decoration: none;
+}
+.App {
+  display: grid;
+  overflow-x: auto;
+  background-color: royalblue;
+  grid-template-rows: s.scaleUp(14) 1fr s.scaleUp(14);
+  .app-header {
+    background-color: #454a4d;
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
+  .app-content {
+    background-color: seagreen;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    @media (min-width: s.$tablet) {
+      margin-left: 9vw;
+      margin-right: 9vw;
+      background-color: #202324;
+    }
+  }
+  .app-footer {
+    background-color: orange;
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
+}
+//#454a4d #202324
